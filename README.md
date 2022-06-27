@@ -10,7 +10,7 @@ Run radian using `nix run github:swt30/radian-flake`. Or include it in a R devel
   inputs.nixpkgs.url = "nixpkgs";
   inputs.flake-utils.url = "flake-utils";
   inputs.r-radian.url = "github:swt30/radian-flake";
-  inputs.r-radian.inputs.follows = "nixpkgs";
+  inputs.r-radian.inputs.nixpkgs.follows = "nixpkgs";
 
   outputs = { self, nixpkgs, flake-utils, r-radian }:
     flake-utils.lib.eachDefaultSystem (system: let
@@ -21,6 +21,10 @@ Run radian using `nix run github:swt30/radian-flake`. Or include it in a R devel
         buildInputs = with pkgs; [
           R
           radian
+          # here you can also include other R packages you need, like:
+          # rPackages.tidyverse
+          # rPackages.DBI
+          # rPackages.shiny
         ];
       };
     });
