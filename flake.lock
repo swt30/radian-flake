@@ -10,9 +10,8 @@
         "type": "github"
       },
       "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
+        "id": "flake-utils",
+        "type": "indirect"
       }
     },
     "nixpkgs": {
@@ -25,13 +24,11 @@
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "id": "nixpkgs",
+        "type": "indirect"
       }
     },
-    "py-radian": {
+    "radian": {
       "flake": false,
       "locked": {
         "lastModified": 1652992299,
@@ -48,7 +45,7 @@
         "type": "github"
       }
     },
-    "py-rchitect": {
+    "rchitect": {
       "flake": false,
       "locked": {
         "lastModified": 1645768136,
@@ -69,8 +66,8 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
-        "py-radian": "py-radian",
-        "py-rchitect": "py-rchitect"
+        "radian": "radian",
+        "rchitect": "rchitect"
       }
     }
   },
