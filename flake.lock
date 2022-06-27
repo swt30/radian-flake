@@ -1,0 +1,77 @@
+{
+  "nodes": {
+    "flake": {
+      "locked": {
+        "lastModified": 1656065134,
+        "narHash": "sha256-oc6E6ByIw3oJaIyc67maaFcnjYOz1mMcOtHxbEf9NwQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "bee6a7250dd1b01844a2de7e02e4df7d8a0a206c",
+        "type": "github"
+      },
+      "original": {
+        "id": "flake-utils",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1656250965,
+        "narHash": "sha256-B5wj+k8uSe9YNijcTW7BHYAZzrzFQq5NMpmrnOGvxqo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9a17f325397d137ac4d219ecbd5c7f15154422f4",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixpkgs-unstable",
+        "type": "indirect"
+      }
+    },
+    "py-radian": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1652992299,
+        "narHash": "sha256-O4C8AL9PercScmF3iP+usPNDyTsTT3ObgdNk5i3DJEo=",
+        "owner": "randy3k",
+        "repo": "radian",
+        "rev": "a07d389b9b41d0c662dd159f7ecbed315c77b20f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "randy3k",
+        "ref": "v0.6.3",
+        "repo": "radian",
+        "type": "github"
+      }
+    },
+    "py-rchitect": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1645768136,
+        "narHash": "sha256-siCl+SlWo0xapxT3LKycNBHdiI+LlS6yMqUnFvilIwk=",
+        "owner": "randy3k",
+        "repo": "rchitect",
+        "rev": "7227be4172f30aa51317e935b25a7e6c6cddf0e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "randy3k",
+        "ref": "v0.3.36",
+        "repo": "rchitect",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake": "flake",
+        "nixpkgs": "nixpkgs",
+        "py-radian": "py-radian",
+        "py-rchitect": "py-rchitect"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
