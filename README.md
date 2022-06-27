@@ -1,7 +1,7 @@
 # radian-flake
 A Nix flake for the excellent [radian console](https://github.com/randy3k/radian) in R.
 
-Experimental - I'm still new to flakes and don't fully understand how to get them building consistently across systems. This currently works on x86_64-darwin; I haven't yet tested other systems.
+Experimental - I'm still new to flakes and am not 100% sure if this builds consistently on anything other than x86_64-linux.
 
 Run radian using `nix run github:swt30/radian-flake`. Or create an R development environment using a flake like the one below:
 
