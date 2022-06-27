@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "flake": {
+    "flake-utils": {
       "locked": {
         "lastModified": 1656065134,
         "narHash": "sha256-oc6E6ByIw3oJaIyc67maaFcnjYOz1mMcOtHxbEf9NwQ=",
@@ -65,7 +65,7 @@
     },
     "root": {
       "inputs": {
-        "flake": "flake",
+        "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
         "py-radian": "py-radian",
         "py-rchitect": "py-rchitect"

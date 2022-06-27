@@ -1,8 +1,7 @@
 # radian-flake
 A Nix flake for the excellent [radian console](https://github.com/randy3k/radian) in R.
 
-Build this flake with `nix build .#radian`, or include it in other flakes
-using the github address of this repo `github:swt30/radian-flake`. For example:
+Run radian using `nix run github:swt30/radian-flake`. Or include it in a R development environment using a flake like the one below:
 
 ```nix
 {
@@ -11,6 +10,7 @@ using the github address of this repo `github:swt30/radian-flake`. For example:
   inputs.nixpkgs.url = "nixpkgs";
   inputs.flake-utils.url = "flake-utils";
   inputs.r-radian.url = "github:swt30/radian-flake";
+  inputs.r-radian.inputs.follows = "nixpkgs";
 
   outputs = { self, nixpkgs, flake-utils, r-radian }:
     flake-utils.lib.eachDefaultSystem (system: let

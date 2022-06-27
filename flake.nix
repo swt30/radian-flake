@@ -14,13 +14,14 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      packages = {
+      packages = rec {
         rchitect = pkgs.python3Packages.buildPythonPackage {
           pname = "rchitect";
           version = "0.3.36";
           src = py-rchitect;
           doCheck = false;
           propagatedBuildInputs = with pkgs.python3Packages; [
+            pkgs.R
             cffi
             six
           ];
@@ -37,6 +38,8 @@
             pygments
           ];
         };
+
+        default = radian;
       };
     });
 }
