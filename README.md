@@ -1,5 +1,5 @@
 # radian-flake
-Nix flake for the [radian console](https://github.com/randy3k/radian) in R
+A Nix flake for the excellent [radian console](https://github.com/randy3k/radian) in R.
 
 Build this flake with `nix build .#radian`, or include it in other flakes
 using the github address of this repo `github:swt30/radian-flake`. For example:
