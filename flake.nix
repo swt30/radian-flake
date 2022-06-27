@@ -20,6 +20,9 @@
           version = "0.3.36";
           src = py-rchitect;
           doCheck = false;
+          preBuild = ''
+            export HOME=$TMP
+          '';
           propagatedBuildInputs = with pkgs.python3Packages; [
             pkgs.R
             cffi
@@ -32,6 +35,9 @@
           version = "0.6.3";
           src = py-radian;
           doCheck = false;
+          preBuild = ''
+            export HOME=$TMP
+          '';
           propagatedBuildInputs = with pkgs.python3Packages; [
             self.packages.${system}.rchitect
             prompt_toolkit
