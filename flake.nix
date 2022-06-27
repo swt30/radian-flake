@@ -19,30 +19,34 @@
           pname = "rchitect";
           version = "0.3.36";
           src = py-rchitect;
-          doCheck = false;
-          preBuild = ''
-            export HOME=$TMP
-          '';
+
+          preBuild = "export HOME=$TMP";
+          buildInputs = with pkgs.python3Packages; [
+            pytest-runner
+          ];
           propagatedBuildInputs = with pkgs.python3Packages; [
             pkgs.R
             cffi
             six
           ];
+          doCheck = false;
         };
 
         radian = pkgs.python3Packages.buildPythonApplication {
           pname = "radian";
           version = "0.6.3";
           src = py-radian;
-          doCheck = false;
-          preBuild = ''
-            export HOME=$TMP
-          '';
+
+          preBuild = "export HOME=$TMP";
+          buildInputs = with pkgs.python3Packages; [
+            pytest-runner
+          ];
           propagatedBuildInputs = with pkgs.python3Packages; [
             self.packages.${system}.rchitect
             prompt_toolkit
             pygments
           ];
+          doCheck = false;
         };
 
         default = radian;
