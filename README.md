@@ -1,14 +1,16 @@
 # radian-flake
 A Nix flake for the excellent [radian console](https://github.com/randy3k/radian) in R.
 
-Run radian using `nix run github:swt30/radian-flake`. Or include it in a R development environment using a flake like the one below:
+Run radian using `nix run github:swt30/radian-flake`. Or create an R development environment using a flake like the one below:
 
 ```nix
-{
-  description = "A development shell flake that includes R and radian";
+# flake.nix
 
-  inputs.nixpkgs.url = "nixpkgs";
-  inputs.flake-utils.url = "flake-utils";
+{
+  description = "A development environment that includes R and radian";
+
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+  inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.r-radian.url = "github:swt30/radian-flake";
   inputs.r-radian.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -30,3 +32,5 @@ Run radian using `nix run github:swt30/radian-flake`. Or include it in a R devel
     });
 }
 ```
+
+Run `nix develop` in the directory containing the above `flake.nix` to launch the development shell.
